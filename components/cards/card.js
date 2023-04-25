@@ -18,27 +18,30 @@ const Card = ({ id, title, img, content, date, category }) => {
   const titleCaseMonth = month.charAt(0).toUpperCase() + month.slice(1);
   const dateString = `${day} ${titleCaseMonth} ${year}`;
   return (
-    <Link href={`/blog/${id}`} className="n">
-      <div className="card">
-        <div className="card_img">
-          <Image
-            alt="IMage"
-            width={200}
-            height={200}
-            src={img}
-            className="card_img_"
-          />
-        </div>
-        <div>
-          <p style={{ textTransform: "uppercase" }}>{cat}</p>
-          <p>{dateString}</p>
-        </div>
-        <div>
-          <p>{title}</p>
-        </div>
-        <div></div>
+    <div
+      className="card"
+      onClick={() => {
+        router.push(`/blog/${id}`);
+      }}
+    >
+      <div className="card_img">
+        <Image
+          alt="IMage"
+          width={200}
+          height={200}
+          src={img}
+          className="card_img_"
+        />
       </div>
-    </Link>
+      <div>
+        <p style={{ textTransform: "uppercase" }}>{cat}</p>
+        <p>{dateString}</p>
+      </div>
+      <div>
+        <p>{title}</p>
+      </div>
+      <div></div>
+    </div>
   );
 };
 

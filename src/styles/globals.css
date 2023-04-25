@@ -291,7 +291,7 @@ body {
 }
 
 .n {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 .midcard {
