@@ -2,7 +2,7 @@ import { parseCookies } from "nookies";
 import React from "react";
 
 const index = () => {
-  return <div>index</div>;
+  return <div></div>;
 };
 
 export async function getServerSideProps(ctx) {
