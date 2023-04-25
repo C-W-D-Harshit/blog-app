@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { baseUrl } from "../../helpers/baseUrl";
+import baseUrl from "../../helpers/baseUrl";
 import useSWR from "swr";
 import axios from "axios";
 import { BiSearch } from "react-icons/bi";

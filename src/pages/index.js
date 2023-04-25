@@ -1,10 +1,11 @@
 import Head from "next/head";
 import Big_card from "../../components/cards/Big_card";
 import Link from "next/link";
-import { baseUrl } from "../../helpers/baseUrl";
+// import { baseUrl } from "../../helpers/baseUrl";
 import { useEffect, useState } from "react";
 import Small_card from "../../components/cards/Small_card";
 import Mid_card from "../../components/cards/Mid_card";
+import baseUrl from "../../helpers/baseUrl";
 
 export default function Home({ travelBlogs, blogs, foodBlogs, healthBlogs }) {
   const [travelIndex1, setTravelIndex1] = useState(null);
