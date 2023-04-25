@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import baseUrl from "../../../helpers/baseUrl";
 import { useRouter } from "next/router";
+import Image from "next/image";
 
 const Id = ({ blog }) => {
   // const [cat, setCat] = useState(category);
@@ -21,7 +22,7 @@ const Id = ({ blog }) => {
       <div className="blog_">
         <p>
           <span style={{ textTransform: "capitalize" }}>{blog.category} </span>{" "}
-          Blogs
+          Blogs:-
         </p>
       </div>
       <div className="blog__top">
@@ -30,6 +31,20 @@ const Id = ({ blog }) => {
         </div>
         <div className="blog__date">
           <p>{dateString}</p>
+        </div>
+      </div>
+      <div className="blog__">
+        <div className="blog_img">
+          <Image
+            src={blog.imageUrl}
+            width={700}
+            height={400}
+            alt="img"
+            className="blog_img_"
+          />
+        </div>
+        <div className="blog_cont">
+          <p>{blog.content}</p>
         </div>
       </div>
     </div>
