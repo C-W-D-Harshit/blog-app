@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import baseUrl from "../../helpers/baseUrl";
+import baseUrl from "../../../helpers/baseUrl";
 import { useRouter } from "next/router";
 
 const Id = ({ blog }) => {
