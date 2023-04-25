@@ -66,6 +66,7 @@ const Health = () => {
                 date={blog.createdAt}
                 category={blog.category}
                 content={blog.content}
+                views={blog.views}
               />
             ))
         ) : (

@@ -281,7 +281,7 @@ body {
 
 .smallcard > :nth-child(2) {
   font-weight: 700;
-  font-size: 3.5rem;
+  font-size: 3.2rem;
   margin-bottom: 5px;
   color: black;
   text-decoration: none !important;
@@ -312,6 +312,7 @@ body {
 
 .midcard_img_ {
   border-radius: 15px;
+  object-fit: cover !important;
 }
 
 .midcard > :first-child {
@@ -451,7 +452,7 @@ body {
   padding: 0.5rem 1rem;
   font-size: 3rem;
   font-weight: 600;
-  margin-bottom: 1rem;
+
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -459,7 +460,116 @@ body {
   -webkit-box-orient: vertical;
 }
 
+.card > :nth-child(4) {
+  display: flex;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
 /* Blog */
 .blog {
   margin-left: 6%;
+  width: 94%;
+}
+
+/* signup */
+
+.signup {
+  margin-left: 6%;
+  width: 94%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "roboto", sans-serif;
+  overflow: hidden !important;
+}
+
+.signup_ {
+  padding: 1rem;
+  background-color: #606dd4;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  width: 28%;
+}
+
+.signup__ {
+  width: 100%;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 15px;
+}
+
+.signup_title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #606dd4;
+  padding-bottom: 2rem;
+}
+
+.signup_name > div > p {
+  font-size: 2rem;
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+}
+
+.signup_name > div > input {
+  border: 2px solid #606dd4;
+  outline: none;
+  padding: 0.5rem 1.5rem;
+  width: 95%;
+  font-size: 1.8rem;
+  border-radius: 10px;
+  color: black;
+}
+
+.signup_name {
+  width: 100%;
+  display: flex;
+  padding-bottom: 1rem;
+}
+
+.signup_name > div {
+  width: 100%;
+}
+
+.signup_email > p {
+  font-size: 2rem;
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+}
+
+.signup_email > input {
+  border: 2px solid #606dd4;
+  outline: none;
+  padding: 0.5rem 1.5rem;
+  width: 95%;
+  font-size: 1.8rem;
+  border-radius: 10px;
+  color: black;
+}
+
+.signup_email {
+  padding-bottom: 1rem;
+}
+
+.signup_cta {
+  width: 12rem;
+  padding: 1rem 2rem;
+  margin-top: 1.5rem;
+  font-size: 2rem;
+  color: #ffffff;
+  background-color: #606dd4;
+  border: 1px solid #606dd4;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.ctas {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

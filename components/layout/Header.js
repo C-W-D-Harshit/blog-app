@@ -8,9 +8,17 @@ import { RiAccountBoxLine } from "react-icons/ri";
 import { MdOutlineNotifications } from "react-icons/md";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import { parseCookies } from "nookies";
 
 const Header = () => {
   const router = useRouter();
+  const { token } = parseCookies();
+  let user = false;
+  if (token) {
+    user = true;
+  } else {
+    user = false;
+  }
 
   return (
     <div className="header">
@@ -99,15 +107,41 @@ const Header = () => {
         </Link>
       </div>
       <div className="header__user">
-        <div className="header__menu_">
-          <MdOutlineNotifications className="header__ico" />
-        </div>
-        <div className="header__menu_">
-          <RiAccountBoxLine className="header__ico" />
-        </div>
-        <div className="header__menu_">
-          <BsGear className="header__ico" />
-        </div>
+        <Link href="/user/notification">
+          <div className="header__menu_">
+            <MdOutlineNotifications
+              className={
+                router.pathname === "/user/notification"
+                  ? "active_ico header__ico"
+                  : "header__ico"
+              }
+            />
+          </div>
+        </Link>
+        <Link href={user ? "/account" : "/login"}>
+          <div className="header__menu_">
+            <RiAccountBoxLine
+              className={
+                router.pathname === "/signup" ||
+                router.pathname === "/account" ||
+                router.pathname === "/login"
+                  ? "active_ico header__ico"
+                  : "header__ico"
+              }
+            />
+          </div>
+        </Link>
+        <Link href={user ? "/settings" : "/login"}>
+          <div className="header__menu_">
+            <BsGear
+              className={
+                router.pathname === "/user/settings"
+                  ? "active_ico header__ico"
+                  : "header__ico"
+              }
+            />
+          </div>
+        </Link>
       </div>
     </div>
   );

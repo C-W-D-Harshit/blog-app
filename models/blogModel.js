@@ -4,7 +4,7 @@ const blogSchema = new mongoose.Schema({
   title: {
     type: String,
     required: true,
-    maxLength: 60,
+    maxLength: 120,
   },
   content: {
     type: String,
