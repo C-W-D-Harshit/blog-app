@@ -19,7 +19,7 @@ const Food = () => {
   }
   useEffect(() => {
     getData();
-  }, []);
+  });
 
   const handleSearch = (e) => {
     setKeyword(e.target.value);
